@@ -1,0 +1,35 @@
+Завдання: Створіть застосування що знаходить корені рівняння виду ax2 + bx + c = 0. 
+
+public class SquareRoot {
+
+    public static void main(String[] args) {
+        double a = 4;
+        double b = 4;
+        double c = 1;
+
+        // Обчислення дискримінанта
+        double D = b * b - 4 * a * c;
+
+        // Перевірка умов для коренів рівняння
+        if (D > 0) {
+            // Обчислення коренів
+            double root1 = (-b + Math.sqrt(D)) / (2 * a);
+            double root2 = (-b - Math.sqrt(D)) / (2 * a);
+
+            // Виведення коренів рівняння
+            System.out.println("x1 = " + root1);
+            System.out.println("x2 = " + root2);
+        } else if (D == 0) {
+            // Обчислення кореня
+            double root = -b / (2 * a);
+
+            // Виведення кореня рівняння
+            System.out.println("x1 = " + root);
+            System.out.println("x2 = " + root);
+        } else {
+            // Виведення результату без коренів
+            System.out.println("x1 =");
+            System.out.println("x2 =");
+        }
+    }
+}
