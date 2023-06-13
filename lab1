@@ -3,8 +3,8 @@
 public class SquareRoot {
     public static void main(String[] args) {
         double a = 3;
-        double b = -18;
-        double c = 27;
+        double b = 2.5;
+        double c = -0.5;
 
         if (a == 0 && b == 0 && c == 0) {
             System.out.println("x1=");
