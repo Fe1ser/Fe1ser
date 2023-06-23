@@ -1,5 +1,3 @@
-Завдання: Створіть застосування що знаходить корені рівняння виду ax2 + bx + c = 0. 
-
 public class SquareRoot {
     public static void main(String[] args) {
         double a = 3;
