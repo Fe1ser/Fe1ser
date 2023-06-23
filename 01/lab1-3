@@ -1,5 +1,3 @@
-Завдання: Напишіть застосування для сортування масиву методом бульбашки.
-
 public class ArraySort {
 
     public static void main(String[] args) {
