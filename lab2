@@ -1,0 +1,40 @@
+Для виконання цієї лабораторної роботи я спочатку переконався, що на моєму комп'ютері встановлені Node.js та npm (Node Package Manager). Після цього я створив новий проект на базі Webpack, використовуючи термінал.
+
+mkdir webpack_project
+cd webpack_project
+npm init -y
+npm install webpack webpack-cli --save-dev
+
+Далі я створив файл конфігурації `webpack.config.js` та розмістив у ньому необхідні налаштування для Webpack.
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Webpack Project',
+    }),
+  ],
+};
+
+Після цього я створив директорію `src/pages` та розмістив у ній файли `index.html` та `about.html`, що містять відповідно вміст сторінок головної та "Про нас".
+
+Для налаштування плагінів `html-webpack-plugin` та `clean-webpack-plugin`, я встановив їх та додав відповідні налаштування у файл `webpack.config.js`.
+
+npm install html-webpack-plugin clean-webpack-plugin --save-dev
+
+Наступним кроком було налаштування `webpack-dev-server`, щоб забезпечити зручну розробку. Я встановив та налаштував його, а також додав команду запуску dev-сервера у файл `package.json`.
+
+npm install webpack-dev-server --save-dev
+
+"scripts": {
+  "dev-start": "webpack-dev-server --open"
+},
