@@ -1,0 +1,28 @@
+// styles.scss
+
+@import 'variables';
+
+body {
+    font-family: Arial, sans-serif;
+    color: $color-dark;
+    background: linear-gradient(to bottom, $color-primary, $color-dark);
+}
+
+h1, h2, h3 {
+    color: $color-primary;
+}
+
+a {
+    color: $color-accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* додайте потрібні відступи та поля */
+}
