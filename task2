@@ -1,5 +1,3 @@
-В заданом предложении найти самое короткое и длинные слова
-
 def find_shortest_longest_words(sentence):
     words = sentence.split()  # Разбиваем предложение на слова
     shortest_word = min(words, key=len)  # Находим самое короткое слово
