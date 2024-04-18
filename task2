@@ -1,0 +1,13 @@
+В заданом предложении найти самое короткое и длинные слова
+
+def find_shortest_longest_words(sentence):
+    words = sentence.split()  # Разбиваем предложение на слова
+    shortest_word = min(words, key=len)  # Находим самое короткое слово
+    longest_word = max(words, key=len)  # Находим самое длинное слово
+    return shortest_word, longest_word
+
+# Пример использования
+sentence = input("Введите предложение: ")
+shortest, longest = find_shortest_longest_words(sentence)
+print("Самое короткое слово:", shortest)
+print("Самое длинное слово:", longest)
