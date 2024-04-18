@@ -1,1 +1,17 @@
+import string
+
+def replace_punctuation_with_spaces(text):
+    result = ''
+    for char in text:
+        if char in string.punctuation:
+            result += ' '  # Заменяем знак препинания пробелом
+        else:
+            result += char  # Оставляем символ без изменений
+    return result
+
+# Пример использования
+text = input("Введите текст: ")
+new_text = replace_punctuation_with_spaces(text)
+print("Текст после замены:")
+print(new_text)
 
