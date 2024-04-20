@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад занять</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #009999, #1D7373);
+            color: #1D7373;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Розклад занять</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: #fff;">Home</a></li>
+                    <li><a href="rozklad.html" style="color: #fff;">Schedule</a></li>
+                    <li><a href="news.html" style="color: #fff;">News</a></li>
+                    <li><a href="photo.html" style="color: #fff;">Photo Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Таблиця розкладу занять поточного семестру</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>День тижня</th>
+                        <th>Час</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Понеділок -->
+                    <tr>
+                        <td rowspan="3">Понеділок</td>
+                        <td>12:55</td>
+                        <td>Ділова та наукова комп графіка</td>
+                    </tr>
+                    <tr>
+                        <td>14:30</td>
+                        <td>Основи програймної інженерії</td>
+                    </tr>
+                    <!-- Вівторок -->
+                    <tr>
+                        <td rowspan="2">Вівторок</td>
+                        <td>11:25</td>
+                        <td>Нейронні мережі</td>
+                    </tr>
+                    <!-- Середа -->
+                    <tr>
+                        <td rowspan="2">Середа</td>
+                        <td>11:25</td>
+                        <td>Основи DevOps</td>
+                    </tr>
+                    <tr>
+                        <td>12:55</td>
+                        <td>SAPR</td>
+                    </tr>
+                    <!-- П'ятниця -->
+                    <tr>
+                        <td rowspan="2">П'ятниця</td>
+                        <td>12:55</td>
+                        <td>Віртуалізація та контейнеризація</td>
+                    </tr>
+                    <tr>
+                        <td>14:30</td>
+                        <td>Основи Програмної інженерії</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Маркований перелік викладачів</h2>
+            <ul>
+                <li>Решевська К.С.</li>
+                <li>Лимаренко Ю.О.</li>
+                <li>Кудін О.В.</li>
+                <li>Столярова А.В.</li>
+                <li>Гоменюк С.І.</li>
+                <li>Гребенюк С.М.</li>
+                <li>Мухін В.В.</li>
+                <li>Кривохата А.Г.</li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
