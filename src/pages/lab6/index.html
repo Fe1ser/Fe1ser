@@ -1,66 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Ваш сайт</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Пункт меню 1</a></li>
-                <li><a href="#">Пункт меню 2</a></li>
-                <li><a href="#">Пункт меню 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h1>Статті на сайті</h1>
-        <article>
-            <header>
-                <h2>Заголовок статті</h2>
-                <p>Опубліковано
-                    <time datetime="2014-01-30T16:31:24+03:00">30.01.2014</time>
-                </p>
-            </header>
-            <p>Давно виявлено, що при оцінці дизайну і композиції читаний текст заважає
-            сконцентруватися.</p>
-            <blockquote>
-                <p>Це цитата з тексту.</p>
-            </blockquote>
-            <p>Багато програм електронного верстатання та редактори HTML використовують Lorem
-            Ipsum як текст за замовчуванням.</p>
-            <footer>
-                <p><a href="#">Читати далі</a></p>
-            </footer>
-        </article>
-        <article>
-            <header>
-                <h2>Заголовок статті</h2>
-                <p>Опубліковано
-                    <time datetime="2014-01-30T16:31:24+03:00">30.01.2014</time>
-                </p>
-            </header>
-            <p>Багато програм електронного верстатання та редактори HTML використовують Lorem
-            Ipsum як текст за замовчуванням.</p>
-            <ol>
-                <li>Перший пункт переліку.</li>
-                <li>Другий пункт переліку.</li>
-                <li>Третій пункт переліку.</li>
-            </ol>
-            <footer>
-                <p><a href="#">Читати далі</a></p>
-            </footer>
-        </article>
-    </section>
-    <aside>
-        <h2>Про автора</h2>
-        <p>Немає нікого, хто б полюбляв біль саму по собі, хто шукав би її і хто хотів
-        би мати її просто тому, що це біль..</p>
-    </aside>
-    <footer>
-        <p>Copyright 2014 мій сайт</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>Welcome to Our Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: #fff;">Home</a></li>
+                    <li><a href="rozklad.html" style="color: #fff;">Schedule</a></li>
+                    <li><a href="news.html" style="color: #fff;">News</a></li>
+                    <li><a href="photo.html" style="color: #fff;">Photo Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2>Article Title 1</h2>
+                <p>Date: 17 April, 2024</p>
+                <p>Content of the first article goes here.</p>
+                <p><a href="#">Read More</a></p>
+            </article>
+            <article>
+                <h2>Article Title 2</h2>
+                <p>Date: 18 April, 2024</p>
+                <p>Content of the second article goes here.</p>
+                <p><a href="#">Read More</a></p>
+            </article>
+            <article>
+                <h2>Article Title 3</h2>
+                <p>Date: 19 April, 2024</p>
+                <p>Content of the third article goes here.</p>
+                <p><a href="#">Read More</a></p>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
