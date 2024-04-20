@@ -1,1 +1,1 @@
-npm install mini-css-extract-plugin --save-dev
+npm install --save-dev mini-css-extract-plugin css-loader sass-loader node-sass
