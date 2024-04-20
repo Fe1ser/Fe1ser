@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* Основні стилі */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #009999, #1D7373);
+    color: #000; /* Колір тексту чорний */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%; /* Фіксована ширина контейнера */
+    margin: 0 auto; /* Вирівнювання по центру */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.photo {
+    margin: 10px;
+    text-align: center;
+}
+
+.photo img {
+    width: 200px; 
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.photo p {
+    margin-top: 5px;
+}
+
+/* Медіа-запити */
+
+/* При ширині вікна менше фіксованої ширини виводу контенту */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%; /* Змінюємо фіксовану ширину на 90% */
+    }
+}
+
+/* Перетворення головного меню з горизонтального на вертикальне */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column; /* Змінюємо напрямок на вертикальний */
+        align-items: center; /* Вирівнюємо по центру */
+        height: auto; /* Автоматична висота */
+    }
+    header nav ul li {
+        margin-bottom: 10px; /* Відступи між пунктами меню */
+    }
+}
+
+/* Відображення повідомлення для Internet Explorer 10 та нижчих */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* Ваш стиль для повідомлення */
+    .ie-message {
+        display: block; /* Показуємо повідомлення */
+    }
+}

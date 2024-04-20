@@ -1,0 +1,29 @@
+/* print.css */
+
+/* Загальні стилі для друкованої версії */
+
+/* Приховати всі елементи, крім вмісту сторінки */
+header, footer, nav, aside {
+    display: none !important;
+}
+
+/* Встановити шрифт для тексту */
+body {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* Видалити фонові зображення та кольори */
+* {
+    background: none !important;
+    color: #000 !important; /* Чорний колір тексту */
+}
+
+/* Відобразити повний URL взамін гіпертекстових посилань */
+a::after {
+    content: " (" attr(href) ")"; /* Виводимо URL після тексту посилання */
+}
+
+/* Встановити поля при друці */
+@page {
+    margin: 50px;
+}
