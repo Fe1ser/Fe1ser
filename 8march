@@ -1,0 +1,92 @@
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+export default function WomensDayCard() {
+  const [petals, setPetals] = useState([]);
+  const [image, setImage] = useState(
+    "https://i.pinimg.com/originals/dc/9b/43/dc9b433cdd102f690521646c7562cdf9.gif"
+  );
+  const [text, setText] = useState(
+    "Нехай цей день подарує тобі радість, тепло і найсолодші моменти. Ти - моя натхненниця, моя магія, моє світло. 💖"
+  );
+  const [title, setTitle] = useState("🌸З 8 Березня, моя найдорожча!🌸");
+
+  useEffect(() => {
+    const newPetals = Array.from({ length: 10 }).map((_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      delay: Math.random() * 5,
+    }));
+    setPetals(newPetals);
+  }, []);
+
+  return (
+    <div className="flex items-center justify-center h-screen bg-gradient-to-br from-pink-100 to-purple-200 overflow-hidden">
+      <div className="relative bg-white p-10 rounded-2xl shadow-2xl max-w-md text-center border-4 border-pink-500">
+        <motion.img
+          src={image}
+          alt="Anime Celebration"
+          className="w-full rounded-lg mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        />
+        <motion.h1
+          className="text-4xl font-extrabold text-pink-600 drop-shadow-md anime-font"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {title}
+        </motion.h1>
+        {text && (
+          <p className="text-gray-700 mt-4 italic anime-text">
+            {text}
+          </p>
+        )}
+        <motion.button
+          className="mt-6 px-6 py-2 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-600 transition transform hover:scale-110 border-2 border-white anime-button"
+          whileHover={{ scale: 1.1 }}
+          onClick={() => {
+            setImage("https://gifdb.com/images/high/anime-kissing-498-x-280-gif-op3h5wkpm21z2dil.gif");
+            setText("");
+            setTitle("Люблю тебе 💖");
+          }}
+        >
+          Арігато 💖
+        </motion.button>
+
+        {/* Пелюстки */}
+        {petals.map((petal) => (
+          <motion.div
+            key={petal.id}
+            className="absolute w-6 h-6 text-pink-400 anime-petal"
+            style={{ left: `${petal.x}%`, top: "-10%" }}
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: "100vh", rotate: 360 }}
+            transition={{ duration: 5, delay: petal.delay, repeat: Infinity }}
+          >
+            🌸
+          </motion.div>
+        ))}
+      </div>
+
+      <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        .anime-font {
+          font-family: 'Pacifico', cursive;
+        }
+        .anime-text {
+          color: #ff66b2;
+          text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5);
+        }
+        .anime-button {
+          box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.8);
+        }
+        .anime-petal {
+          filter: drop-shadow(0px 0px 5px rgba(255, 105, 180, 0.5));
+        }
+      `}</style>
+    </div>
+  );
+}
